@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="QLGV">
+  <DataContextMoniker Name="/QLGVDataContext" />
+  <nestedChildShapes>
+    <classShape Id="638df056-f2f9-4a3b-9a55-5d2127814270" absoluteBounds="0.75, 3.875, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/QLGVDataContext/GiaoVien" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e2763170-b486-4062-9b75-957ae4185b17" absoluteBounds="0.765, 4.335, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="92ea3d0b-4015-4764-a31b-79c4a3122991" absoluteBounds="0.75, 1.125, 2, 1.3862939453125">
+      <DataClassMoniker Name="/QLGVDataContext/MonHoc" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7f46e4e4-58c3-4d6d-9298-d836c0d72fd7" absoluteBounds="0.765, 1.585, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e2a29619-79d0-4ca7-bccd-8169883261c0" absoluteBounds="3.5, 0.875, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/QLGVDataContext/PhanCong" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3815f847-e5f0-4530-a86b-fb9b13d6ed84" absoluteBounds="3.515, 1.335, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d9f843b6-1f81-48ad-b2be-a5f05a900d7c" absoluteBounds="3.75, 3.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/QLGVDataContext/TaiKhoan" />
+      <nestedChildShapes>
+        <elementListCompartment Id="95f85a49-0e9a-469b-961f-fa6838bbce71" absoluteBounds="3.765, 4.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 5.51849609375); (3.59375 : 5.51849609375); (3.59375 : 2.64589680989583)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/QLGVDataContext/GiaoVien/GiaoVien_PhanCong" />
+      <nodes>
+        <classShapeMoniker Id="638df056-f2f9-4a3b-9a55-5d2127814270" />
+        <classShapeMoniker Id="e2a29619-79d0-4ca7-bccd-8169883261c0" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 1.81814697265625); (3.5 : 1.81814697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/QLGVDataContext/MonHoc/MonHoc_PhanCong" />
+      <nodes>
+        <classShapeMoniker Id="92ea3d0b-4015-4764-a31b-79c4a3122991" />
+        <classShapeMoniker Id="e2a29619-79d0-4ca7-bccd-8169883261c0" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

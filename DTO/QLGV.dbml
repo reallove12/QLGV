@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QLGV" Class="QLGVDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-DIPEA7U\SQLEXPRESS;Initial Catalog=QLGV;Integrated Security=True" SettingsObjectName="DTO.Properties.Settings" SettingsPropertyName="QLGVConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.GiaoVien" Member="GiaoViens">
+    <Type Name="GiaoVien">
+      <Column Name="MAGV" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TENGV" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="NGAYSINH" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DIACHI" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="SDT" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Association Name="GiaoVien_PhanCong" Member="PhanCongs" ThisKey="MAGV" OtherKey="MAGV" Type="PhanCong" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MonHoc" Member="MonHocs">
+    <Type Name="MonHoc">
+      <Column Name="MAMH" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TENMH" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="SOTC" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Association Name="MonHoc_PhanCong" Member="PhanCongs" ThisKey="MAMH" OtherKey="MAMH" Type="PhanCong" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PhanCong" Member="PhanCongs">
+    <Type Name="PhanCong">
+      <Column Name="MAHP" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MAMH" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MAGV" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NGAYBD" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="NGAYKT" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="GiaoVien_PhanCong" Member="GiaoVien" ThisKey="MAGV" OtherKey="MAGV" Type="GiaoVien" IsForeignKey="true" />
+      <Association Name="MonHoc_PhanCong" Member="MonHoc" ThisKey="MAMH" OtherKey="MAMH" Type="MonHoc" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TaiKhoan" Member="TaiKhoans">
+    <Type Name="TaiKhoan">
+      <Column Name="MATK" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="USERNAME" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="PASSWORD" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="QUYEN" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>
